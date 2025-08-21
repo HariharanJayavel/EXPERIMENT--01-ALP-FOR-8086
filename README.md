@@ -1,7 +1,7 @@
 # EXPERIMENT--01-ALP-FOR-8086
-Name :
-Roll no 
-Date of experiment :
+### Name : HARIHARAN J
+### Roll no : 212223240047
+### Date of experiment : 18.08.2025
 
 
 
@@ -77,31 +77,122 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 ## Programs for arithmetic  operations
 
-## Addition  of 8 bit ALP 
+## Addition of 16 bit ALP (Register Mode)
+```
+MOV AX,1A52h
+
+MOV BX,32B3h
+
+ABB AX,BX
+```
+
+## Output
+
+<img width="1920" height="1080" alt="Screenshot (82)" src="https://github.com/user-attachments/assets/f8c49b29-e0da-4a57-9294-199f0d97bace" />
+
+## Subtraction of 8 bit numbers ALP (Immediate Mode) 
+```
+MOV AX,1a52h
+
+SUB AX,32b3h
+
+ret
+```
+
+## Output
+
+<img width="1920" height="1080" alt="Screenshot (84)" src="https://github.com/user-attachments/assets/8e916476-4bc7-472c-96da-5164b781ae03" />
+
+## Multiplication alp (Direct Memory Mode)
+``` 
+NUM DW 1a52h
+           
+MOV AX,32b3h
+
+MUL NUM
+
+ret
+```
+## Output  
+
+<img width="1920" height="1080" alt="Screenshot (86)" src="https://github.com/user-attachments/assets/d5b64f89-0bca-437d-a070-cb9e6fbe9b6d" />
 
 
+## Division alp (Register Indirect Mode)
+
+```   
+NUM DW 32B3h
+           
+MOV BX, OFFSET NUM 
+
+MOV AX, 1A52h
+
+DIV WORD PTR [BX]
+
+ret
+```
+## Output  
+
+<img width="1920" height="1080" alt="Screenshot (87)" src="https://github.com/user-attachments/assets/071d9b8c-bd9b-4510-bb5d-bcce808b0ebe" />
+
+## AND  of 16 bit ALP (Register Mode)
+```
+MOV AX, 1A52h
+
+MOV BX, 32B3h
+
+AND AX,BX
+
+ret      
+```
+
+## Output
+
+<img width="1920" height="1080" alt="Screenshot (88)" src="https://github.com/user-attachments/assets/89f616ce-20f2-4be9-8785-8f445e632c90" />
+
+## OR  of 16 bit ALP (Register Mode)
+```
+MOV AX, 1A52h
+
+MOV BX, 32B3h
+
+OR AX,BX
+
+ret       
+```
 
 ## Output  
- 
-## Subtraction   of 8 bit numbers  ALP 
- 
+
+<img width="1920" height="1080" alt="Screenshot (89)" src="https://github.com/user-attachments/assets/108dc897-e0ae-45b2-8e5c-a69e9e24cb3e" />
+
+## NOT  of 16 bit ALP (Register Mode)
+```
+MOV AX, 1A52h
+
+NOT AX
+
+ret      
+```
+
 ## Output  
-## Multiplication alp 
- ## Output  
+<img width="1920" height="1080" alt="Screenshot (91)" src="https://github.com/user-attachments/assets/b0bf1440-0ff3-4adb-9378-33ed7b3d9f91" />
 
 
-## Division alp 
+## XOR  of 16 bit ALP (Register Mode)
+```
+MOV AX, 1A52h
+
+MOV BX, 32B3h
+
+XOR AX,BX
+
+ret   
+```
 
 ## Output  
 
+<img width="1920" height="1080" alt="Screenshot (90)" src="https://github.com/user-attachments/assets/65ed7905-38d6-45ac-8cb6-1cd9c8d0840f" />
 
 ## Result :
- 
 
-
-
-
-
-
-
-
+The execution of ALP on fundamental arithmetic and logical operations is successfully completed.
