@@ -72,20 +72,20 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 ## Programs for arithmetic  operations
 
-## Addition of 16 bit ALP (Register Mode)
+## Addition of 16 bit ALP 
 ```
 MOV AX,1A52h
 
 MOV BX,32B3h
 
-ABB AX,BX
+ADD AX,BX
 ```
 
 ## Output
 
 <img width="1920" height="1080" alt="Screenshot (82)" src="https://github.com/user-attachments/assets/f8c49b29-e0da-4a57-9294-199f0d97bace" />
 
-## Subtraction of 8 bit numbers ALP (Immediate Mode) 
+## Subtraction of 8 bit numbers ALP 
 ```
 MOV AX,1a52h
 
@@ -98,37 +98,35 @@ ret
 
 <img width="1920" height="1080" alt="Screenshot (84)" src="https://github.com/user-attachments/assets/8e916476-4bc7-472c-96da-5164b781ae03" />
 
-## Multiplication alp (Direct Memory Mode)
+## Multiplication alp 
 ``` 
-NUM DW 1a52h
-           
-MOV AX,32b3h
+MOV AX, 0X2A35H
 
-MUL NUM
+MOV BX, 0X5F35H
 
-ret
+MUL BX
+
+RET
 ```
 ## Output  
 
-<img width="1920" height="1080" alt="Screenshot (86)" src="https://github.com/user-attachments/assets/d5b64f89-0bca-437d-a070-cb9e6fbe9b6d" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c5081bc1-0529-4436-aa89-38e944122295" />
 
 
-## Division alp (Register Indirect Mode)
+## Division alp 
 
 ```   
-NUM DW 32B3h
-           
-MOV BX, OFFSET NUM 
+MOV AX, 0X2A35H
 
-MOV AX, 1A52h
+MOV BX, 0X5F35H
 
-DIV WORD PTR [BX]
+DIV BX
 
-ret
+RET
 ```
 ## Output  
 
-<img width="1920" height="1080" alt="Screenshot (87)" src="https://github.com/user-attachments/assets/071d9b8c-bd9b-4510-bb5d-bcce808b0ebe" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2ac80c2b-f4f9-4fb4-9589-e95c82da04d7" />
 
 ## AND  of 16 bit ALP (Register Mode)
 ```
